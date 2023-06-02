@@ -1,7 +1,6 @@
-import firebase_app from "../config";
-import { GoogleAuthProvider, getAuth, signInWithRedirect } from "firebase/auth";
+import { GoogleAuthProvider, signInWithRedirect } from "firebase/auth";
 
-const auth = getAuth(firebase_app);
+import { auth } from ".";
 
 const googleProvider = new GoogleAuthProvider();
 googleProvider.setCustomParameters({ prompt: "select_account" });
