@@ -1,12 +1,19 @@
-import Image from "next/image";
+"use client";
+
 import styles from "./page.module.css";
+
 import { DataEntry } from "@/components/DataEntry";
+import { SignUp } from "@/components/SignUp";
+import { Box } from "@chakra-ui/react";
 
 export default function Home() {
   return (
     <main className={styles.main}>
-      <div className={styles.description}>
-        <DataEntry />
+      <div>
+        <Box>
+          <SignUp />
+          <DataEntry />
+        </Box>
       </div>
     </main>
   );
