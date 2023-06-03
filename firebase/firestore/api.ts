@@ -1,15 +1,15 @@
 import { doc, getDoc, getDocs, collection, addDoc, updateDoc, deleteDoc, DocumentData, DocumentReference, Query, query, where, getFirestore } from "firebase/firestore";
 
-import firebaseApp from "../app";
+import app from "../app";
 
-const db = getFirestore(firebaseApp)
+const db = getFirestore(app)
 
-interface FirestoreDocument<Data = DocumentData> {
+export interface FirestoreDocument<Data = DocumentData> {
   id: string;
   data: Data;
 }
 
-interface FirestoreCollection<Data = DocumentData> {
+export interface FirestoreCollection<Data = DocumentData> {
   [key: string]: Data;
 }
 

@@ -5,6 +5,7 @@ import { Heading } from "@chakra-ui/react";
 import api from "@/services/dataEntries/api";
 import { useState } from "react";
 import { useDataEntries } from "@/services/dataEntries/hooks";
+import { DataEntry } from "./DataEntry";
 
 export const DataEntries = () => {
   const { data } = useDataEntries();
@@ -14,9 +15,7 @@ export const DataEntries = () => {
         Data entries
       </Heading>
       {data?.map((entry) => (
-        <div key={entry.id}>
-          <p>{entry.id}</p>
-        </div>
+        <DataEntry entry={entry} key={entry.id} />
       ))}
     </>
   );
