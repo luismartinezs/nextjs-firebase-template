@@ -3,10 +3,11 @@
 import { SignOut } from "@/components/SignOut";
 import styles from "./page.module.css";
 
-import { DataEntry } from "@/components/DataEntry";
+import { DataEntries } from "@/components/DataEntries";
 import { SignUp } from "@/components/SignUp";
 import { useAuth } from "@/hooks/useAuth";
 import { Box, Text } from "@chakra-ui/react";
+import { CreateDataEntry } from "@/components/CreateDataEntry";
 
 export default function Home() {
   const { user } = useAuth();
@@ -19,11 +20,12 @@ export default function Home() {
             <>
               <Text>Hello {user.displayName || user.email}</Text>
               <SignOut />
+              <CreateDataEntry />
+              <DataEntries />
             </>
           ) : (
             <SignUp />
           )}
-          <DataEntry />
         </Box>
       </div>
     </main>
