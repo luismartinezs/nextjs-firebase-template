@@ -13,7 +13,7 @@ export const DataEntries = () => {
         Data entries
       </Heading>
       {data?.map((entry) => (
-        <DataEntry entry={entry} key={entry.id} />
+        <DataEntry entry={entry.data} key={entry.id} />
       ))}
     </>
   );
