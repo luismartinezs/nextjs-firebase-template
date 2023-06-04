@@ -4,7 +4,7 @@ import firebase from "firebase/compat/app";
 import { firebaseConfig } from "@/firebase/config";
 import { User, onAuthStateChanged } from "firebase/auth";
 
-import { auth } from "@/firebase/auth";
+import { auth } from "@/firebase/app";
 
 export const useAuth = () => {
   const firebaseApp = firebase.initializeApp(firebaseConfig);

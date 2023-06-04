@@ -1,8 +1,6 @@
-import { doc, getDoc, getDocs, collection, addDoc, updateDoc, deleteDoc, DocumentData, DocumentReference, Query, query, where, getFirestore } from "firebase/firestore";
+import { doc, getDoc, getDocs, collection, addDoc, updateDoc, deleteDoc, DocumentData, DocumentReference, Query, query, where } from "firebase/firestore";
 
-import app from "../app";
-
-const db = getFirestore(app)
+import { db } from "@/firebase/app";
 
 export interface FirestoreDocument<Data = DocumentData> {
   id: string;

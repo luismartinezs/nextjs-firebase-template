@@ -18,3 +18,6 @@
 
 - firebase + react-firebase-hooks (+ zustand)
 - firebase + react-query (+ zustand)
+  - manually invalidate cache
+- firebase only (+ zustand)
+  - use on snapshot change for updates

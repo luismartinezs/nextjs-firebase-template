@@ -1,6 +1,6 @@
 "use client";
 
-import { googleSignUp } from "@/firebase/auth/signup";
+import { googleSignUp } from "@/app/firebase-only/lib/signup";
 import { Button } from "@chakra-ui/react";
 
 export const SignUp = () => {

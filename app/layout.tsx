@@ -6,6 +6,7 @@ import { Providers } from "./providers";
 import { ColorMode } from "@/components/ColorMode";
 
 import { firebaseConfig } from "@/firebase/config";
+import Content from "@/components/Content";
 
 export const metadata = {
   title: "NextJS firebase template",
@@ -17,13 +18,15 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const firebaseApp = initializeApp(firebaseConfig);
+  initializeApp(firebaseConfig);
 
   return (
     <html lang="en">
       <body>
         <ColorMode />
-        <Providers>{children}</Providers>
+        <Providers>
+          <Content>{children}</Content>
+        </Providers>
       </body>
     </html>
   );

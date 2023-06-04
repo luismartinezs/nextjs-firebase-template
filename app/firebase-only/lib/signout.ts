@@ -1,3 +1,3 @@
-import { auth } from ".";
+import { auth } from "@/firebase/app";
 
 export const signOut = () => auth.signOut();

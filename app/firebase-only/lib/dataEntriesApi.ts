@@ -1,8 +1,8 @@
-import { addDocument, getDocumentsByUserUid } from "@/firebase/firestore/api";
 import { Timestamp } from "firebase/firestore";
 import { v4 as uuidv4 } from 'uuid';
 
-import { auth } from '@/firebase/auth'
+import { addDocument, getDocumentsByUserUid } from "@/firebase/firestore/api";
+import { auth } from '@/firebase/app'
 
 const COLLECTION = 'dataEntries'
 

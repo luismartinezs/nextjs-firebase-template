@@ -2,10 +2,8 @@
 
 import { Heading } from "@chakra-ui/react";
 
-import api from "@/services/dataEntries/api";
-import { useState } from "react";
-import { useDataEntries } from "@/services/dataEntries/hooks";
-import { DataEntry } from "./DataEntry";
+import { useDataEntries } from "@/app/react-query/hooks/dataEntries";
+import { DataEntry } from "@/components/DataEntry";
 
 export const DataEntries = () => {
   const { data } = useDataEntries();

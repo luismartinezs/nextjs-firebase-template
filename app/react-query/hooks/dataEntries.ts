@@ -1,7 +1,7 @@
-import { useAuth } from "@/hooks/useAuth"
+import { useAuth } from "@/app/firebase-only/hooks/useAuth"
 import { useQuery, useQueryClient, useMutation } from "@tanstack/react-query"
 
-import api from "./api"
+import api from "@/app/firebase-only/lib/dataEntriesApi"
 
 
 export const useDataEntries = () => {

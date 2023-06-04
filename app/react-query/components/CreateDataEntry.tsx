@@ -2,7 +2,7 @@
 
 import { Button } from "@chakra-ui/react";
 
-import { useCreateEntry } from "@/services/dataEntries/hooks";
+import { useCreateEntry } from "@/app/react-query/hooks/dataEntries";
 
 export const CreateDataEntry = () => {
   const { mutate } = useCreateEntry();

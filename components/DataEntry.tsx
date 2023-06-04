@@ -1,7 +1,7 @@
 import { DocumentData } from "firebase/firestore";
 
 import { FirestoreDocument } from "@/firebase/firestore/api";
-import { Card } from "@chakra-ui/react";
+import { Box, Card, Text } from "@chakra-ui/react";
 
 export const DataEntry = ({
   entry,
@@ -9,13 +9,16 @@ export const DataEntry = ({
   entry: FirestoreDocument<DocumentData>;
 }) => {
   return (
-    <Card p={3} m={1}>
+    <Card p={3} my={1}>
       {Object.entries(entry.data).map(([key, value]) => (
-        <div key={key}>
-          <p>
-            {key}: {JSON.stringify(value)}
-          </p>
-        </div>
+        <Box key={key}>
+          <Text>
+            <Text as="span" color="gray.400">
+              {key}:
+            </Text>{" "}
+            <Text as="pre">{JSON.stringify(value)}</Text>
+          </Text>
+        </Box>
       ))}
     </Card>
   );
