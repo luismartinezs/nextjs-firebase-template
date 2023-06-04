@@ -3,7 +3,7 @@
 ## Dev tasks
 
 - [ ] Changing entries in DB updates app
-- [ ] data is loaded from firebase and stored / synced in zustand
+- [ ] data is loaded from firebase and stored / synced in zustand (?)
 
 ## Stories
 
