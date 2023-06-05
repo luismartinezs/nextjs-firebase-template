@@ -1,7 +1,7 @@
 "use client";
 
 import Navbar from "@/components/Navbar";
-import { Flex } from "@chakra-ui/react";
+import { Container, Flex } from "@chakra-ui/react";
 
 const Content = ({ children }: { children: React.ReactNode }): JSX.Element => {
   return (
@@ -9,16 +9,9 @@ const Content = ({ children }: { children: React.ReactNode }): JSX.Element => {
       <header>
         <Navbar />
       </header>
-      <Flex
-        as="main"
-        direction="column"
-        justify="space-between"
-        align="center"
-        p={6}
-        minH="100vh"
-      >
+      <Container as="main" p={6} minH="100vh" maxW="container.md">
         {children}
-      </Flex>
+      </Container>
     </>
   );
 };
