@@ -1,4 +1,5 @@
 import { Box, Flex, Text } from "@chakra-ui/react";
+import React from "react";
 
 const PageUi = ({
   user,
@@ -6,12 +7,14 @@ const PageUi = ({
   signupButton,
   createButton,
   data,
+  children,
 }: {
   user?: any;
   signoutButton?: JSX.Element;
   signupButton?: JSX.Element;
   createButton?: JSX.Element;
   data?: JSX.Element;
+  children?: React.ReactNode;
 }): JSX.Element => {
   return (
     <Box>
@@ -27,6 +30,7 @@ const PageUi = ({
       ) : (
         signupButton
       )}
+      {children}
     </Box>
   );
 };
