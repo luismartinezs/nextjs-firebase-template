@@ -1,7 +1,7 @@
 "use client";
 
 import Navbar from "@/components/Navbar";
-import { Container, Flex } from "@chakra-ui/react";
+import { Container } from "@chakra-ui/react";
 
 const Content = ({ children }: { children: React.ReactNode }): JSX.Element => {
   return (

@@ -1,14 +1,10 @@
 import { useEffect, useState } from "react";
 
-import firebase from "firebase/compat/app";
-import { firebaseConfig } from "@/firebase/config";
 import { User, onAuthStateChanged } from "firebase/auth";
 
 import { auth } from "@/firebase/app";
 
 export const useAuth = () => {
-  const firebaseApp = firebase.initializeApp(firebaseConfig);
-
   const [user, setUser] = useState<User | null>(null);
 
   useEffect(() => {
@@ -21,7 +17,7 @@ export const useAuth = () => {
         setUser(null);
       }
     });
-  }, [firebaseApp]);
+  }, []);
 
   return { user };
 };

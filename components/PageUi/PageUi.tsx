@@ -25,7 +25,7 @@ const PageUi = ({
           {data}
         </>
       ) : (
-        [signupButton]
+        signupButton
       )}
     </Box>
   );
